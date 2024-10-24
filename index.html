@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page with Banner, Section, and Footer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Pretendard, sans-serif;
+        }
+
+        /* GNB */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: right;
+            margin-top: 25px;
+            background-color: transparent;
+            z-index: 1000;
+        }
+
+        /* 홈 버튼 */
+        .home-button {
+            position: fixed;
+            left: 20px; 
+            top: 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 15px;
+        }
+
+        nav a:last-child {
+            margin-right: 30px;
+        }
+
+        nav a:hover {
+            color: #cfa279;
+        }
+
+        /* 배너 */
+        .banner {
+            height: 100vh;
+            background: url('hogwarts.gif') no-repeat center center/cover;
+        }
+
+        /* 섹션 : 소개 */
+        .introduce-section {
+            padding: 110px 50px;
+            background-color: #c3c3c3;
+            color: #171717;
+            text-align: center;
+        }
+
+        .introduce-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            padding-bottom: 40px;
+        }
+
+        .introduce-section p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            margin-bottom: 0px;
+            padding: 0 20px;
+            text-align: justify;
+        }
+
+        /* 섹션 : 오시는 길 */
+        .direction-section {
+            padding: 150px;
+            background-color: #1c1c1c;
+            color: white;
+            text-align: center;
+        }
+
+        .direction-section h1, .direction-section p {
+            width: 100%;
+            text-align: center;
+        }
+
+        .direction-section h2 {
+            font-size: 2.5em;
+        }
+
+        .step-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .step-card {
+            background-color: #2c2c2c;
+            color: #eaeaea;
+            border-radius: 10px;
+            flex-basis: calc(25% - 15px); 
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .step-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .step-card h5 {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .step-card p {
+            font-size: 0.85em;
+            line-height: 1.4;
+            color: #b3b3b3;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+
+<!-- GNB -->
+
+<a href="index.html" class="home-button">
+    <img src="icon.png">
+</a>
+
+<nav>
+    <div class="menu">
+        <a href="griffindor.html">Griffindor</a>
+        <a href="hufflepuff.html">Hufflepuff</a>
+        <a href="ravenclaw.html">Ravenclaw</a>
+        <a href="slytherin.html">Slytherin</a>
+        <a href="subject.html">Subject</a>
+    </div>
+</nav>
+
+
+<!-- 배너 -->
+<section class="banner"></section>
+
+
+<!-- 섹션 : 소개 -->
+<section class="introduce-section">
+    <img src="img.png" alt="Sorting Hat">
+    <h2>Welcome to Wizarding World</h2>
+    <p>
+        <b>Welcome to Hogwarts, the most renowned school of magic in the world!</b>
+        <br>
+        Here, you will embark on a magical journey like no other, where you’ll master powerful spells,
+        brew enchanting potions, and uncover the deepest mysteries of the magical realm.
+    </p>
+    <p>
+        Hogwarts is a place where history and magic come to life. Our castle, hidden deep in the mountains, has been the home of countless witches and wizards for centuries. The moment you step through its grand doors, you’ll feel the ancient magic flowing through every stone and hallway. From the majestic Great Hall where we gather for feasts, to the vast library filled with spellbooks and ancient scrolls, Hogwarts is a place where magic thrives in every corner.
+    </p>
+    <p>
+        At Hogwarts, we believe in nurturing every wizard's and witch's magical potential. Whether it’s through magical dueling, caring for magical creatures, or learning how to defend yourself against dark magic, every day will bring new lessons and adventures. With each spell you cast and every potion you brew, you’ll grow stronger and more confident in your abilities.
+    </p>
+</section>
+
+
+<!-- 섹션 : 오시는 길 -->
+<section class="direction-section">
+    <h2>How to Get to Hogwarts</h2>
+    <p>
+        Reaching Hogwarts is no ordinary journey—it’s filled with magical elements that only wizards and witches can navigate.
+        <br>
+        Follow these steps carefully to ensure you arrive at the legendary Hogwarts School of Witchcraft and Wizardry.
+    </p>
+    <br>
+    <br>
+    <div class="step-card-container">
+        <div class="step-card">
+            <img src="step1.png" alt="Step 1">
+            <h5>Step 1: Arrival at King's Cross Station</h5>
+            <p>Your journey begins at King’s Cross Station in London. Be sure to arrive early to avoid missing the Hogwarts Express.</p>
+        </div>
+        <div class="step-card">
+            <img src="step2.png" alt="Step 2">
+            <h5>Step 2: Finding Platform 9¾</h5>
+            <p>Look for the hidden entrance to Platform 9¾, the magical gateway between platforms 9 and 10.</p>
+        </div>
+        <div class="step-card">
+            <img src="step3.png" alt="Step 3">
+            <h5>Step 3: Passing Through the Barrier</h5>
+            <p>Walk confidently towards the barrier without hesitation to access the platform.</p>
+        </div>
+        <div class="step-card">
+            <img src="step4.png" alt="Step 4">
+            <h5>Step 4: Boarding the Hogwarts Express</h5>
+            <p>Board the scarlet steam engine that departs at exactly 11 AM and enjoy the scenic journey.</p>
+        </div>
+        <div class="step-card">
+            <img src="step5.png" alt="Step 5">
+            <h5>Step 5: Arrival at Hogsmeade Station</h5>
+            <p>Reach the charming village of Hogsmeade and prepare for your first sight of Hogwarts.</p>
+        </div>
+        <div class="step-card">
+            <img src="step6.png" alt="Step 6">
+            <h5>Step 6: Entering Hogwarts Castle</h5>
+            <p>Older students take enchanted carriages to the castle, while first-years cross the Black Lake with Hagrid.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 푸터 -->
+<footer>
+    <p>&copy; 22461098 정다은. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
